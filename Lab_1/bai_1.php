@@ -25,6 +25,8 @@ print_r("ket qua semester: " . $semester);
 $course_name = find_by_semester($semester);
 $page_content = $course_name;
 ?>
+
+<!-- view -->
 <!DOCTYPE html>
 <html lang="en">
 
