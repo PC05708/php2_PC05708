@@ -9,9 +9,12 @@
 
 <body>
     <h2><?= $page_content ?></h2>
-    <select name="courses">
-        <?php foreach ($list_of_courses as $course_name) : ?>
-            <option value=""><?= $course_name ?></option>
-        <?php endforeach; ?>
-    </select>
+    <form action="" method="post">
+        <select name="semester">
+            <?php foreach ($course as $key => $course_name) : ?>
+                <option value="<?= $key ?>"><?= $course_name ?></option>
+            <?php endforeach; ?>
+        </select>
+        <button name="ok" type="submit">ok</button>
+    </form>
 </body>
