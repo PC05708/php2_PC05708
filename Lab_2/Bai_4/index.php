@@ -1,13 +1,9 @@
 <?php
 require "vendor/autoload.php";
 
-use App\Controller;
-use App\Core;
-use App\Model;
+use App\database;
 
-$Control = new controller();
-$model = new model();
-$core = new core();
+$db = new database;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -19,7 +15,7 @@ $core = new core();
 </head>
 
 <body>
-    <h1>Home Page</h1>
+    <h1>Home page</h1>
 </body>
 
 </html>

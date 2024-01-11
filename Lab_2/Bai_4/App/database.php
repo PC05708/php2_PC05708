@@ -2,10 +2,10 @@
 
 namespace App;
 
-class Core
+class database
 {
     function __construct()
     {
-        echo "This is Base Core<br>";
+        echo "this is database";
     }
 }

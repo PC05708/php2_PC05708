@@ -1,6 +1,5 @@
 {
-    "name": "thanh/bai_6",
-    "description": "test autoload",
+    "name": "thanh/bai_4",
     "autoload": {
         "psr-4": {
             "App\\": "App/"
