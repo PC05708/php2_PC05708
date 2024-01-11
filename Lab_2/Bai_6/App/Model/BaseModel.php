@@ -1,8 +1,9 @@
 <?php
 
-namespace App;
+namespace App\Model;
 
-class Core
+
+class BaseModel
 {
     function __construct()
     {

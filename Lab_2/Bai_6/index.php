@@ -1,13 +1,13 @@
 <?php
 require "vendor/autoload.php";
 
-use App\Controller;
-use App\Core;
-use App\Model;
+use App\controller\BaseControl;
+use App\model\BaseModel;
+use App\core\Route;
 
-$Control = new controller();
-$model = new model();
-$core = new core();
+$Control = new BaseControl();
+$model = new BaseModel();
+$core = new Route();
 ?>
 <!DOCTYPE html>
 <html lang="en">

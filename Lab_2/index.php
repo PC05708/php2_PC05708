@@ -4,7 +4,6 @@
 
 // bai 3
 spl_autoload_register(function ($class) {
-    var_dump($class);
     include "{$class}.php";
 });
 

@@ -1,8 +1,8 @@
 <?php
 
-namespace App;
+namespace App\Controller;
 
-class Controller
+class BaseControl
 {
     function __construct()
     {
