@@ -1,0 +1,11 @@
+{
+    "name": "thanh/asm_php2_pc05708",
+    "description": "ASM php 2",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/App"
+        }
+    },
+    "require": {}
+}
