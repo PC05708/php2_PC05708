@@ -6,11 +6,18 @@ class Route
         global $routes;
         unset($routes["default_controller"]);
         $url = trim($url, "/");
-        $handleUrl = $url;
+        $handleUrl = [
+            "url" => $url,
+            'key' => "default_controller"
+        ];
         if (!empty($routes)) {
             foreach ($routes as $key => $value) {
                 if (preg_match('~' . $key . '~is', $url)) {
-                    $handleUrl = preg_replace('~' . $key . '~is', $value, $url);
+
+                    $handleUrl = [
+                        'url' => preg_replace('~' . $key . '~is', $value, $url),
+                        'key' => $key
+                    ];
                     break;
                 }
             }

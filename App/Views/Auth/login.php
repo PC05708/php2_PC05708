@@ -13,7 +13,7 @@
         <div class="row justify-content-center">
             <div class="col-5">
                 <h2 class="text-center">Đăng nhập</h2>
-                <form action="post" action="" enctype="multipart/form-data">
+                <form method="post" action="" enctype="multipart/form-data">
                     <div class="mb-3">
                         <label for="">Email</label>
                         <input type="text" name="email" id="email" class="form-control" placeholder="Email...">

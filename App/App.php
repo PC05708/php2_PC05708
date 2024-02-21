@@ -1,4 +1,5 @@
 <?php
+
 class App
 {
     private $__controller, $__action, $__params, $__routes, $__db;
@@ -33,10 +34,9 @@ class App
     public function handleUrl()
     {
         $url = $this->getUrl();
-
         $url = $this->__routes->handleRoute($url);
-
-        $urlArray = array_filter(explode("/", $url));
+        $this->checkLogin($url['key']);
+        $urlArray = array_filter(explode("/", $url['url']));
         $urlArray = array_values($urlArray);
 
         // check xem cai $urlArray có chắn chắn là file không
@@ -96,6 +96,24 @@ class App
             call_user_func_array([$this->__controller, $this->__action], $this->__params);
         } else {
             $this->loadErrors();
+        }
+    }
+    public function checkLogin($key)
+    {
+        if (!empty($key)) {
+            if ($key == 'Tai-khoan/login') {
+                return 0;
+            }
+            foreach (_APP['Login'] as $value) {
+
+                if ($value == $key) {
+
+                    if (empty(Session::data('user'))) {
+                        $response = new Response();
+                        $response->redirect('Tai-khoan/login');
+                    }
+                }
+            }
         }
     }
     public function getCurrentController()
